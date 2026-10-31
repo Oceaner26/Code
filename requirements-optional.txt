@@ -1,0 +1,8 @@
+# Optional original plotting / helper scripts only.
+-r requirements.txt
+colour
+trimesh
+opencv-python
+joblib
+PyMuPDF
+pytest

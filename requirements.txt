@@ -1,0 +1,7 @@
+# Legacy training/evaluation dependencies; not an original lockfile.
+# For the primary train2.py / train_diffusion.py / eval_td3.py entry points.
+numpy
+scipy
+matplotlib
+torch
+tqdm
