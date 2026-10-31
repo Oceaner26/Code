@@ -1,6 +1,6 @@
 # Ocean Diviner — Source Code and Experiment Guide
 
-**This repository provides a cleaned, English-documented release of the Ocean Diviner research code, based on `Code(8).zip`.** It retains the original REMUS simulation, diffusion-based action proposals, TD3 candidate evaluation, and S-Surface control pipeline. Standalone scripts outside the main execution paths have been organized, while the retained source comments and docstrings have been translated or streamlined. **Executable Python syntax trees (excluding documentation strings) are unchanged.** The cleanup preserves the control-law equations, neural-network architecture, reward rules, acoustic formulas, checkpoint tensors, and default parameters.
+**This repository provides a cleaned, English-documented release of the Ocean Diviner research code (demo version).** It retains the original REMUS simulation, diffusion-based action proposals, TD3 candidate evaluation, and S-Surface control pipeline. Standalone scripts outside the main execution paths have been organized, while the retained source comments and docstrings have been translated or streamlined. **Executable Python syntax trees (excluding documentation strings) are unchanged.** The cleanup preserves the control-law equations, neural-network architecture, reward rules, acoustic formulas, checkpoint tensors, and default parameters.
 
 [Original source settings](docs/ORIGINAL_SETTINGS.md) · [Cleanup log](docs/CLEANUP_LOG.md) · [File policy](docs/FILE_POLICY.md) · [Known limitations](docs/KNOWN_LIMITATIONS.md) · [Validation](docs/VALIDATION.md)
 
@@ -97,7 +97,7 @@ python tools/verify_preservation.py
 
 The verifier checks the SHA-256 hashes of retained source files and assets against the packaged manifest, compares each retained original Python file's executable AST with its pre-cleanup fingerprint (excluding docstrings), and checks for remaining Chinese `#` comments. This provides an integrity check for the published source package; experiment-level evaluation uses the relevant configurations, checkpoints, input data, and recorded metrics.
 
-**Implementation reference:** The preserved source is based on `Code(8).zip`. Its main-script yaw gain is `[5, 1, 0.01]`, and its acoustic-rate calculation uses the source expression `10**(SL-TL-NL)`. The cleanup retains these numerical conventions; see [Original source settings](docs/ORIGINAL_SETTINGS.md) and [Known limitations](docs/KNOWN_LIMITATIONS.md) for implementation details.
+
 
 ## Research usage and publication notes
 
